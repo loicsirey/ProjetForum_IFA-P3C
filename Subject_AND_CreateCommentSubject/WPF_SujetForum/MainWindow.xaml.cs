@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -25,8 +26,15 @@ namespace WPF_SujetForum
         public MainWindow()
         {
             InitializeComponent();
-            daoConnection = new DAO();
+            daoConnection = new DAO(ConfigurationManager.AppSettings["serveur"], ConfigurationManager.AppSettings["dbName"], ConfigurationManager.AppSettings["dbUser"], ConfigurationManager.AppSettings["dbPassword"]);
             RefreshListBox();
+
+            /*
+             Est normalement effectué par le login
+             */
+            User.IdUser = "2";
+            User.Username = "User";
+            User.IsAdmin = true;
         }
 
         private void btnCreateSujet_Click(object sender, RoutedEventArgs e)

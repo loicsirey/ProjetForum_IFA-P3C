@@ -11,13 +11,8 @@ namespace WPF_SujetForum
     class DAO
     {
         MySqlConnection conn;
-        public DAO()
+        public DAO(string server, string database, string uid, string password)
         {
-            string server = "localhost";
-            string database = "forumcs";
-            string uid = "adminForumCS";
-            string password = "Super2012";
-
             conn = new MySqlConnection("SERVER=" + server + ";" + "DATABASE=" + database + ";" + "UID=" + uid + ";" + "PASSWORD=" + password + ";");
         }
 
@@ -123,14 +118,17 @@ namespace WPF_SujetForum
 
         public void DeleteById(string idSubject)
         {
-            string query = "DELETE FROM comment WHERE idSubject = @idSubject; DELETE FROM subject WHERE idSubject = @idSubject;";
-
-            if (this.OpenConnection() == true)
+            if (User.IsAdmin)
             {
-                MySqlCommand cmd = new MySqlCommand(query, conn);
-                cmd.Parameters.AddWithValue("@idSubject", idSubject);
-                cmd.ExecuteNonQuery();
-                this.CloseConnection();
+                string query = "DELETE FROM comment WHERE idSubject = @idSubject; DELETE FROM subject WHERE idSubject = @idSubject;";
+
+                if (this.OpenConnection() == true)
+                {
+                    MySqlCommand cmd = new MySqlCommand(query, conn);
+                    cmd.Parameters.AddWithValue("@idSubject", idSubject);
+                    cmd.ExecuteNonQuery();
+                    this.CloseConnection();
+                }
             }
         }
 
