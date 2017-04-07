@@ -1,0 +1,12 @@
+C:\Users\trifunovii_info\Desktop\forumCs\forumCs\bin\Debug\forumCs.exe.config
+C:\Users\trifunovii_info\Desktop\forumCs\forumCs\bin\Debug\forumCs.exe
+C:\Users\trifunovii_info\Desktop\forumCs\forumCs\bin\Debug\forumCs.pdb
+C:\Users\trifunovii_info\Desktop\forumCs\forumCs\obj\Debug\forumCs.csprojResolveAssemblyReference.cache
+C:\Users\trifunovii_info\Desktop\forumCs\forumCs\obj\Debug\forumCs.FrmPincipale.resources
+C:\Users\trifunovii_info\Desktop\forumCs\forumCs\obj\Debug\forumCs.Login.resources
+C:\Users\trifunovii_info\Desktop\forumCs\forumCs\obj\Debug\forumCs.Properties.Resources.resources
+C:\Users\trifunovii_info\Desktop\forumCs\forumCs\obj\Debug\forumCs.csproj.GenerateResource.Cache
+C:\Users\trifunovii_info\Desktop\forumCs\forumCs\obj\Debug\forumCs.exe
+C:\Users\trifunovii_info\Desktop\forumCs\forumCs\obj\Debug\forumCs.pdb
+C:\Users\trifunovii_info\Desktop\forumCs\forumCs\bin\Debug\MySql.Data.dll
+C:\Users\trifunovii_info\Desktop\forumCs\forumCs\obj\Debug\forumCs.Inscription.resources
