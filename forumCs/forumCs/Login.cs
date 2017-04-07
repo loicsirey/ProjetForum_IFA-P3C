@@ -33,8 +33,16 @@ namespace forumCs
 
         private void btnConnexion_Click(object sender, EventArgs e)
         {
-            verficationConnexion.Connexion(txtBxSurnom.Text, txtBxMotDePasse.Text);
-            this.Close();
+            if(verficationConnexion.Connexion(txtBxSurnom.Text, txtBxMotDePasse.Text))
+            {
+                FrmPincipale frm = new FrmPincipale();
+                frm.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Mot de passe incorrecte");
+            }
         }
     }
 }

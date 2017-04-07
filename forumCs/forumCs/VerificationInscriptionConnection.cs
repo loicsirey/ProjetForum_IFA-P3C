@@ -26,15 +26,19 @@ namespace forumCs
                 _connexionBase.InsertUserInscription(surnom, motdepasse,false);
         }
 
-        public void Connexion(string surnom, string motdepasse)
+        public bool Connexion(string surnom, string motdepasse)
         {
             string verificationSurnom = _connexionBase.SelectUser(surnom);
             if (surnom == verificationSurnom && _connexionBase.Hash(motdepasse)==_connexionBase.SelectPassword(surnom))
             {
-                
-                FrmPincipale frm = new FrmPincipale();
-                frm.Show();
-                
+                User.IdUser = _connexionBase.SelectIdUser(surnom);
+                User.Username = surnom;
+                User.IsAdmin = _connexionBase.SelectIsAdmin(surnom);
+                return true;
+            }
+            else
+            {
+                return false;
             }
 
         }

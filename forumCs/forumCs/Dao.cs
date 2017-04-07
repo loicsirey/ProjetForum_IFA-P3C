@@ -63,6 +63,47 @@ namespace forumCs
             return resultat;
         }
 
+        public string SelectIdUser(string username)
+        {
+            _connection.Open();
+            string resultat = "";
+            MySqlCommand command = new MySqlCommand("SELECT `idUser` FROM `User` WHERE `username` = '" + username + "'", _connection);
+            command.ExecuteNonQuery();
+            MySqlDataReader myReader;
+            myReader = command.ExecuteReader();
+            while (myReader.Read())
+            {
+                resultat = myReader.GetString(0);
+            }
+            myReader.Close();
+            _connection.Close();
+            return resultat;
+        }
+
+        public bool SelectIsAdmin(string username)
+        {
+            _connection.Open();
+            bool resultat = false;
+            MySqlCommand command = new MySqlCommand("SELECT `isAdmin` FROM `User` WHERE `username` = '" + username + "'", _connection);
+            command.ExecuteNonQuery();
+            MySqlDataReader myReader;
+            myReader = command.ExecuteReader();
+            while (myReader.Read())
+            {
+                if(myReader.GetString(0) == "1")
+                {
+                    resultat = true;
+                }
+                else
+                {
+                    resultat = false;
+                }
+            }
+            myReader.Close();
+            _connection.Close();
+            return resultat;
+        }
+
         public string Hash(string password)
         {
             var bytes = new UTF8Encoding().GetBytes(password);

@@ -10,3 +10,14 @@ C:\Users\trifunovii_info\Desktop\forumCs\forumCs\obj\Debug\forumCs.exe
 C:\Users\trifunovii_info\Desktop\forumCs\forumCs\obj\Debug\forumCs.pdb
 C:\Users\trifunovii_info\Desktop\forumCs\forumCs\bin\Debug\MySql.Data.dll
 C:\Users\trifunovii_info\Desktop\forumCs\forumCs\obj\Debug\forumCs.Inscription.resources
+C:\Users\durrenmatc_info\Documents\GitHub\ProjetForum_IFA-P3C\forumCs\forumCs\obj\Debug\forumCs.FrmPincipale.resources
+C:\Users\durrenmatc_info\Documents\GitHub\ProjetForum_IFA-P3C\forumCs\forumCs\obj\Debug\forumCs.Inscription.resources
+C:\Users\durrenmatc_info\Documents\GitHub\ProjetForum_IFA-P3C\forumCs\forumCs\obj\Debug\forumCs.Login.resources
+C:\Users\durrenmatc_info\Documents\GitHub\ProjetForum_IFA-P3C\forumCs\forumCs\obj\Debug\forumCs.Properties.Resources.resources
+C:\Users\durrenmatc_info\Documents\GitHub\ProjetForum_IFA-P3C\forumCs\forumCs\obj\Debug\forumCs.csproj.GenerateResource.Cache
+C:\Users\durrenmatc_info\Documents\GitHub\ProjetForum_IFA-P3C\forumCs\forumCs\bin\Debug\forumCs.exe.config
+C:\Users\durrenmatc_info\Documents\GitHub\ProjetForum_IFA-P3C\forumCs\forumCs\bin\Debug\forumCs.exe
+C:\Users\durrenmatc_info\Documents\GitHub\ProjetForum_IFA-P3C\forumCs\forumCs\bin\Debug\forumCs.pdb
+C:\Users\durrenmatc_info\Documents\GitHub\ProjetForum_IFA-P3C\forumCs\forumCs\obj\Debug\forumCs.exe
+C:\Users\durrenmatc_info\Documents\GitHub\ProjetForum_IFA-P3C\forumCs\forumCs\obj\Debug\forumCs.pdb
+C:\Users\durrenmatc_info\Documents\GitHub\ProjetForum_IFA-P3C\forumCs\forumCs\obj\Debug\forumCs.csprojResolveAssemblyReference.cache

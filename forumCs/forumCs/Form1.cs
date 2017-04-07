@@ -17,6 +17,11 @@ namespace forumCs
             InitializeComponent();
         }
 
-
+        private void FrmPincipale_Load(object sender, EventArgs e)
+        {
+            textBox1.Text = User.IdUser;
+            textBox2.Text = User.Username;
+            textBox3.Text = User.IsAdmin.ToString();
+        }
     }
 }
