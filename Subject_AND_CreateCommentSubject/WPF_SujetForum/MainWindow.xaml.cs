@@ -26,6 +26,8 @@ namespace WPF_SujetForum
         public MainWindow()
         {
             InitializeComponent();
+
+            //ConfigurationManager.AppSettings["..."] provient du fichier "app.config"
             daoConnection = new DAO(ConfigurationManager.AppSettings["serveur"], ConfigurationManager.AppSettings["dbName"], ConfigurationManager.AppSettings["dbUser"], ConfigurationManager.AppSettings["dbPassword"]);
             RefreshListBox();
 
@@ -37,6 +39,11 @@ namespace WPF_SujetForum
             User.IsAdmin = true;
         }
 
+        /// <summary>
+        /// Lorsque l'on clique sur le bouton "btnCreateSujet"
+        /// </summary>
+        /// <param name="sender">Objet de provenance</param>
+        /// <param name="e">Evénements</param>
         private void btnCreateSujet_Click(object sender, RoutedEventArgs e)
         {
             if (tbxCreateSujet.Text != "")
@@ -46,15 +53,23 @@ namespace WPF_SujetForum
             }
         }
 
+        /// <summary>
+        /// Lorsque l'on clique sur le bouton "btnDeleteSujet"
+        /// </summary>
+        /// <param name="sender">Objet de provenance</param>
+        /// <param name="e">Evénements</param>
         private void btnDeleteSujet_Click(object sender, RoutedEventArgs e)
         {
             if (lsbSujets.SelectedItem != null)
             {
-                daoConnection.DeleteById(lsbSujets.SelectedItem.ToString().Split('.')[0]);
+                daoConnection.DeleteByIdSubject(lsbSujets.SelectedItem.ToString().Split('.')[0]);
                 RefreshListBox();
             }
         }
 
+        /// <summary>
+        /// Efface et réinsère toutes les données.
+        /// </summary>
         private void RefreshListBox()
         {
             lsbSujets.Items.Clear();
@@ -67,11 +82,16 @@ namespace WPF_SujetForum
             }
         }
 
+        /// <summary>
+        /// Lorsque l'on clique sur le bouton "btnCreateCommentaire"
+        /// </summary>
+        /// <param name="sender">Objet de provenance</param>
+        /// <param name="e">Evénements</param>
         private void btnCreateCommentaire_Click(object sender, RoutedEventArgs e)
         {
             if (lsbSujets.SelectedItem != null && tbxComments.Text != "")
             {
-                daoConnection.InsertComment(tbxComments.Text, lsbSujets.SelectedItem.ToString().Split('.')[0], "1");
+                daoConnection.InsertComment(tbxComments.Text, lsbSujets.SelectedItem.ToString().Split('.')[0], User.IdUser);
             }
         }
     }

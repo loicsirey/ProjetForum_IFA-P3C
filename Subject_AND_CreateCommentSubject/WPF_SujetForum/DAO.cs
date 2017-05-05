@@ -116,7 +116,7 @@ namespace WPF_SujetForum
             }
         }
 
-        public void DeleteById(string idSubject)
+        public void DeleteByIdSubject(string idSubject)
         {
             if (User.IsAdmin)
             {
@@ -134,7 +134,7 @@ namespace WPF_SujetForum
 
         public void InsertComment(string comment, string idSubject, string idUser)
         {
-            string query = "INSERT INTO `comment`(`textComment`, `idSubject`, `idUser`) VALUES (@textComment, @idSubject, @idUser);";
+            string query = "INSERT INTO `comment`(`textComment`, `idSubject`, `idUser`) VALUES (\"@textComment\", @idSubject, @idUser);";
 
             //open connection
             if (OpenConnection())
