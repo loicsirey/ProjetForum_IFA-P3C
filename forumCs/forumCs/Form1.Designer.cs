@@ -37,6 +37,7 @@
             this.ClientSize = new System.Drawing.Size(284, 262);
             this.Name = "FrmPincipale";
             this.Text = "Forum";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmPincipale_FormClosing);
             this.ResumeLayout(false);
 
         }

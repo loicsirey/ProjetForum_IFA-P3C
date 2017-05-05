@@ -17,5 +17,10 @@ namespace forumCs
             InitializeComponent();
             this.Text = "Ivan";
         }
+
+        private void FrmPincipale_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
