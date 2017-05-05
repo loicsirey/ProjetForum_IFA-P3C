@@ -19,28 +19,24 @@ namespace forumCs
 
         public void inscription(string surnom,string motdepasse)
         {
-           string verificationSurnom = _connexionBase.SelectUser(surnom);
-            if (surnom == verificationSurnom)
-                Debug.Print("Error");
+          
+            if (_connexionBase.SelectUser(surnom).Count == 0)
+                _connexionBase.InsertUserInscription(surnom, motdepasse, false);
             else
-                _connexionBase.InsertUserInscription(surnom, motdepasse,false);
+                MessageBox.Show("Surnom déjà utilisé");
         }
 
         public bool Connexion(string surnom, string motdepasse)
         {
-            string verificationSurnom = _connexionBase.SelectUser(surnom);
-            if (surnom == verificationSurnom && _connexionBase.Hash(motdepasse)==_connexionBase.SelectPassword(surnom))
+            if (_connexionBase.SelectUser(surnom).Count != 0)
             {
-                User.IdUser = _connexionBase.SelectIdUser(surnom);
-                User.Username = surnom;
-                User.IsAdmin = _connexionBase.SelectIsAdmin(surnom);
-                return true;
+                if (_connexionBase.SelectUser(surnom)[0] == surnom && _connexionBase.Hash(motdepasse) == _connexionBase.SelectUser(surnom)[1])
+                    return true;
+                else
+                    return false;
             }
             else
-            {
                 return false;
-            }
-
         }
     }
 }

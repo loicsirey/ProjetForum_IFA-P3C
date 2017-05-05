@@ -96,6 +96,7 @@
             this.txtBxConfirmationMDP.PasswordChar = '*';
             this.txtBxConfirmationMDP.Size = new System.Drawing.Size(146, 20);
             this.txtBxConfirmationMDP.TabIndex = 11;
+            this.txtBxConfirmationMDP.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // Inscription
             // 

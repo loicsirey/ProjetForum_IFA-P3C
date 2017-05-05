@@ -112,6 +112,7 @@
             this.MainMenuStrip = this.menuInscription;
             this.Name = "Login";
             this.Text = "Login";
+            this.Load += new System.EventHandler(this.Login_Load);
             this.menuInscription.ResumeLayout(false);
             this.menuInscription.PerformLayout();
             this.ResumeLayout(false);

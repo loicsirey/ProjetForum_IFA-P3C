@@ -24,6 +24,11 @@ namespace forumCs
             verificationInscription = new VerificationInscriptionConnection(connexionBase);
         }
 
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
         private void Inscription_Load(object sender, EventArgs e)
         {
 

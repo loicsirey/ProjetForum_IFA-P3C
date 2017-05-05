@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Configuration;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -13,17 +14,19 @@ namespace forumCs
 {
     public partial class Login : Form
     {
-        VerificationInscriptionConnection verficationConnexion;
+        VerificationInscriptionConnection verificationConnexion;
         Dao connexionBase;
-
         public Login()
         {
-            InitializeComponent();
             connexionBase = new Dao(ConfigurationManager.AppSettings["dbName"], ConfigurationManager.AppSettings["serveur"], ConfigurationManager.AppSettings["dbUser"], ConfigurationManager.AppSettings["dbPassword"]);
-            verficationConnexion = new VerificationInscriptionConnection(connexionBase);
-           
+            verificationConnexion = new VerificationInscriptionConnection(connexionBase);
+            InitializeComponent();
         }
 
+        private void Login_Load(object sender, EventArgs e)
+        {
+
+        }
 
         private void sinscrireToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -33,16 +36,18 @@ namespace forumCs
 
         private void btnConnexion_Click(object sender, EventArgs e)
         {
-            if(verficationConnexion.Connexion(txtBxSurnom.Text, txtBxMotDePasse.Text))
+            if (verificationConnexion.Connexion(txtBxSurnom.Text, txtBxMotDePasse.Text) == true)
             {
-                FrmPincipale frm = new FrmPincipale();
-                frm.Show();
                 this.Hide();
+                FrmPincipale Frmpricipale = new FrmPincipale();
+                Frmpricipale.Show();
             }
             else
             {
-                MessageBox.Show("Mot de passe incorrecte");
+                MessageBox.Show("Mauvais username ou mot de passe","Alert",MessageBoxButtons.OK,MessageBoxIcon.Warning);
             }
+
+            
         }
     }
 }

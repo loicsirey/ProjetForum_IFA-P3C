@@ -29,75 +29,18 @@ namespace forumCs
 
         }
 
-        public string SelectUser(string username)
+        public List<string> SelectUser(string username)
         {
             _connection.Open();
-            string resultat = "";
-            MySqlCommand command = new MySqlCommand("SELECT username FROM `User` WHERE `username` = '" + username + "'", _connection);
+            List<string> resultat = new List<string>();
+            MySqlCommand command = new MySqlCommand("SELECT username,password FROM `User` WHERE `username` = '" + username + "'", _connection);
             command.ExecuteNonQuery();
             MySqlDataReader myReader;
             myReader = command.ExecuteReader();
             while (myReader.Read())
             {
-                resultat = myReader.GetString(0);
-            }
-            myReader.Close();
-            _connection.Close();
-            return resultat;
-        }
-
-        public string SelectPassword(string username)
-        {
-            _connection.Open();
-            string resultat = "";
-            MySqlCommand command = new MySqlCommand("SELECT password FROM `User` WHERE `username` = '" + username + "'", _connection);
-            command.ExecuteNonQuery();
-            MySqlDataReader myReader;
-            myReader = command.ExecuteReader();
-            while (myReader.Read())
-            {
-                resultat = myReader.GetString(0);
-            }
-            myReader.Close();
-            _connection.Close();
-            return resultat;
-        }
-
-        public string SelectIdUser(string username)
-        {
-            _connection.Open();
-            string resultat = "";
-            MySqlCommand command = new MySqlCommand("SELECT `idUser` FROM `User` WHERE `username` = '" + username + "'", _connection);
-            command.ExecuteNonQuery();
-            MySqlDataReader myReader;
-            myReader = command.ExecuteReader();
-            while (myReader.Read())
-            {
-                resultat = myReader.GetString(0);
-            }
-            myReader.Close();
-            _connection.Close();
-            return resultat;
-        }
-
-        public bool SelectIsAdmin(string username)
-        {
-            _connection.Open();
-            bool resultat = false;
-            MySqlCommand command = new MySqlCommand("SELECT `isAdmin` FROM `User` WHERE `username` = '" + username + "'", _connection);
-            command.ExecuteNonQuery();
-            MySqlDataReader myReader;
-            myReader = command.ExecuteReader();
-            while (myReader.Read())
-            {
-                if(myReader.GetString(0) == "1")
-                {
-                    resultat = true;
-                }
-                else
-                {
-                    resultat = false;
-                }
+                resultat.Add(myReader.GetString(0));
+                resultat.Add(myReader.GetString(1));
             }
             myReader.Close();
             _connection.Close();
