@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPF_SujetForum"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="528.376">
+        Title="MainWindow" Height="435.35" Width="528.376">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -17,6 +17,7 @@
         <Button x:Name="btnDeleteSujet" Content="Supprimer un sujet" Grid.Column="1" HorizontalAlignment="Left" Margin="10,201,0,0" VerticalAlignment="Top" Width="240" Click="btnDeleteSujet_Click"/>
         <TextBox x:Name="tbxComments" HorizontalAlignment="Left" Height="223" Margin="10,87,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="240"/>
         <Button x:Name="btnCreateCommentaire" Content="Créer un commentaire" Grid.Column="1" HorizontalAlignment="Left" Margin="10,268,0,0" VerticalAlignment="Top" Width="240" Height="42" Click="btnCreateCommentaire_Click"/>
-
+        <local:ButtonUp x:Name="buttonUp" Content="ButtonUp" HorizontalAlignment="Left" Margin="54,19,0,0" VerticalAlignment="Top" Height="204" Width="196"/>
+        <local:ButtonDown x:Name="buttonDown" Content="ButtonDown" HorizontalAlignment="Left" Margin="54,228,0,0" VerticalAlignment="Top" Width="196" Height="167"/>
     </Grid>
 </Window>

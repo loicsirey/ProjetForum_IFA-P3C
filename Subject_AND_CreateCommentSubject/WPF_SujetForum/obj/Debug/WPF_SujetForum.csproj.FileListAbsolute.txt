@@ -19,7 +19,6 @@ C:\Users\durrenmatc_info\Documents\GitHub\ProjetForum_IFA-P3C\Subject_AND_Create
 C:\Users\durrenmatc_info\Documents\GitHub\ProjetForum_IFA-P3C\Subject_AND_CreateCommentSubject\WPF_SujetForum\bin\Debug\WPF_SujetForum.exe
 C:\Users\durrenmatc_info\Documents\GitHub\ProjetForum_IFA-P3C\Subject_AND_CreateCommentSubject\WPF_SujetForum\bin\Debug\WPF_SujetForum.pdb
 C:\Users\durrenmatc_info\Documents\GitHub\ProjetForum_IFA-P3C\Subject_AND_CreateCommentSubject\WPF_SujetForum\bin\Debug\MySql.Data.dll
-C:\Users\durrenmatc_info\Documents\GitHub\ProjetForum_IFA-P3C\Subject_AND_CreateCommentSubject\WPF_SujetForum\obj\Debug\WPF_SujetForum.csprojResolveAssemblyReference.cache
 C:\Users\durrenmatc_info\Documents\GitHub\ProjetForum_IFA-P3C\Subject_AND_CreateCommentSubject\WPF_SujetForum\obj\Debug\MainWindow.g.cs
 C:\Users\durrenmatc_info\Documents\GitHub\ProjetForum_IFA-P3C\Subject_AND_CreateCommentSubject\WPF_SujetForum\obj\Debug\App.g.cs
 C:\Users\durrenmatc_info\Documents\GitHub\ProjetForum_IFA-P3C\Subject_AND_CreateCommentSubject\WPF_SujetForum\obj\Debug\WPF_SujetForum_MarkupCompile.cache
@@ -28,3 +27,5 @@ C:\Users\durrenmatc_info\Documents\GitHub\ProjetForum_IFA-P3C\Subject_AND_Create
 C:\Users\durrenmatc_info\Documents\GitHub\ProjetForum_IFA-P3C\Subject_AND_CreateCommentSubject\WPF_SujetForum\obj\Debug\WPF_SujetForum.g.resources
 C:\Users\durrenmatc_info\Documents\GitHub\ProjetForum_IFA-P3C\Subject_AND_CreateCommentSubject\WPF_SujetForum\obj\Debug\WPF_SujetForum.Properties.Resources.resources
 C:\Users\durrenmatc_info\Documents\GitHub\ProjetForum_IFA-P3C\Subject_AND_CreateCommentSubject\WPF_SujetForum\obj\Debug\WPF_SujetForum.csproj.GenerateResource.Cache
+C:\Users\durrenmatc_info\Documents\GitHub\ProjetForum_IFA-P3C\Subject_AND_CreateCommentSubject\WPF_SujetForum\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\durrenmatc_info\Documents\GitHub\ProjetForum_IFA-P3C\Subject_AND_CreateCommentSubject\WPF_SujetForum\obj\Debug\WPF_SujetForum.csprojResolveAssemblyReference.cache

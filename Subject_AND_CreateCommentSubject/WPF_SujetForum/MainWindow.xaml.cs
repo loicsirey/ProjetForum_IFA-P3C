@@ -94,5 +94,13 @@ namespace WPF_SujetForum
                 daoConnection.InsertComment(tbxComments.Text, lsbSujets.SelectedItem.ToString().Split('.')[0], User.IdUser);
             }
         }
+
+        private void buttonDown_Click(object sender, RoutedEventArgs e)
+        {
+        }
+
+        private void buttonUp_Click(object sender, RoutedEventArgs e)
+        {
+        }
     }
 }
