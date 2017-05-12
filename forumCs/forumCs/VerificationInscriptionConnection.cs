@@ -19,9 +19,12 @@ namespace forumCs
 
         public void inscription(string surnom,string motdepasse)
         {
-          
+
             if (_connexionBase.SelectUser(surnom).Count == 0)
+            {
                 _connexionBase.InsertUserInscription(surnom, motdepasse, false);
+                MessageBox.Show("Vous êtes inscrit !");
+            }
             else
                 MessageBox.Show("Surnom déjà utilisé");
         }

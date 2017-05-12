@@ -41,6 +41,8 @@ namespace forumCs
                 this.Hide();
                 FrmPincipale Frmpricipale = new FrmPincipale();
                 Frmpricipale.Show();
+                User.Username = txtBxSurnom.Text;
+                
             }
             else
             {

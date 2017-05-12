@@ -47,6 +47,36 @@ namespace forumCs
             return resultat;
         }
 
+        public void ModificationCommentaire(string textModif, int idCommentaire)
+        {
+            //Que si l'utilisateur est un Admin
+            _connection.Open();
+            List<string> resultat = new List<string>();
+            MySqlCommand command = new MySqlCommand("UPDATE comment SET textComment = '"+ textModif + "' WHERE CustomerID = "+ idCommentaire + "; ", _connection);
+            command.ExecuteNonQuery();
+            MySqlDataReader myReader;
+            myReader = command.ExecuteReader();
+            myReader.Close();
+            _connection.Close();
+        }
+
+        public List<string> SelectCommentaire()
+        {
+            _connection.Open();
+            List<string> resultat = new List<string>();
+            MySqlCommand command = new MySqlCommand("SELECT textComment FROM `comment`", _connection);
+            command.ExecuteNonQuery();
+            MySqlDataReader myReader;
+            myReader = command.ExecuteReader();
+            while (myReader.Read())
+            {
+                resultat.Add(myReader.GetString(0));
+            }
+            myReader.Close();
+            _connection.Close();
+            return resultat;
+        }
+
         public string Hash(string password)
         {
             var bytes = new UTF8Encoding().GetBytes(password);

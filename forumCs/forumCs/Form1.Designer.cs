@@ -28,21 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.lstBCommentaire = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
+            // 
+            // lstBCommentaire
+            // 
+            this.lstBCommentaire.FormattingEnabled = true;
+            this.lstBCommentaire.Location = new System.Drawing.Point(12, 155);
+            this.lstBCommentaire.Name = "lstBCommentaire";
+            this.lstBCommentaire.Size = new System.Drawing.Size(260, 95);
+            this.lstBCommentaire.TabIndex = 0;
             // 
             // FrmPincipale
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 262);
+            this.Controls.Add(this.lstBCommentaire);
             this.Name = "FrmPincipale";
             this.Text = "Forum";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmPincipale_FormClosing);
+            this.Load += new System.EventHandler(this.FrmPincipale_Load);
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        private System.Windows.Forms.ListBox lstBCommentaire;
     }
 }
 
