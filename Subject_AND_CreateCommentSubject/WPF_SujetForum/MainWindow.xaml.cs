@@ -34,8 +34,8 @@ namespace WPF_SujetForum
             /*
              Est normalement effectué par le login
              */
-            User.IdUser = "2";
-            User.Username = "User";
+            User.IdUser = "3";
+            User.Username = "test";
             User.IsAdmin = true;
         }
 
@@ -101,6 +101,20 @@ namespace WPF_SujetForum
 
         private void buttonUp_Click(object sender, RoutedEventArgs e)
         {
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            
+        }
+
+        private void btnRefresh_Click(object sender, RoutedEventArgs e)
+        {
+            lsbListComment.Items.Clear();
+            foreach (KeyValuePair<string, string> item in daoConnection.SelectCommentaire())
+            {
+                lsbListComment.Items.Add(item.Key + ":" + item.Value);
+            }
         }
     }
 }

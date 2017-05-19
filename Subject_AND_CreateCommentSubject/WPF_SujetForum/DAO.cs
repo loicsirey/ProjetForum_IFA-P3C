@@ -134,7 +134,7 @@ namespace WPF_SujetForum
 
         public void InsertComment(string comment, string idSubject, string idUser)
         {
-            string query = "INSERT INTO `comment`(`textComment`, `idSubject`, `idUser`) VALUES (\"@textComment\", @idSubject, @idUser);";
+            string query = "INSERT INTO `comment`(`textComment`, `idSubject`, `idUser`) VALUES (@textComment, @idSubject, @idUser);";
 
             //open connection
             if (OpenConnection())
@@ -152,6 +152,23 @@ namespace WPF_SujetForum
                 //close connection
                 CloseConnection();
             }
+        }
+
+        public Dictionary<string, string> SelectCommentaire()
+        {
+            conn.Open();
+            Dictionary<string, string> resultat = new Dictionary<string, string>();
+            MySqlCommand command = new MySqlCommand("SELECT idComment, textComment FROM `comment`", conn);
+            command.ExecuteNonQuery();
+            MySqlDataReader myReader;
+            myReader = command.ExecuteReader();
+            while (myReader.Read())
+            {
+                resultat.Add(myReader.GetString(0), myReader.GetString(1));
+            }
+            myReader.Close();
+            conn.Close();
+            return resultat;
         }
     }
 }
